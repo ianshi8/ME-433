@@ -1,0 +1,11 @@
+Plotted to '/Users/IanShi/Desktop/Classwork/ME 433/Coursework/HW4/HW4 Kicad/HW4-F_Cu.gbr'.
+Plotted to '/Users/IanShi/Desktop/Classwork/ME 433/Coursework/HW4/HW4 Kicad/HW4-B_Cu.gbr'.
+Plotted to '/Users/IanShi/Desktop/Classwork/ME 433/Coursework/HW4/HW4 Kicad/HW4-F_Paste.gbr'.
+Plotted to '/Users/IanShi/Desktop/Classwork/ME 433/Coursework/HW4/HW4 Kicad/HW4-B_Paste.gbr'.
+Plotted to '/Users/IanShi/Desktop/Classwork/ME 433/Coursework/HW4/HW4 Kicad/HW4-F_Silkscreen.gbr'.
+Plotted to '/Users/IanShi/Desktop/Classwork/ME 433/Coursework/HW4/HW4 Kicad/HW4-B_Silkscreen.gbr'.
+Plotted to '/Users/IanShi/Desktop/Classwork/ME 433/Coursework/HW4/HW4 Kicad/HW4-F_Mask.gbr'.
+Plotted to '/Users/IanShi/Desktop/Classwork/ME 433/Coursework/HW4/HW4 Kicad/HW4-B_Mask.gbr'.
+Plotted to '/Users/IanShi/Desktop/Classwork/ME 433/Coursework/HW4/HW4 Kicad/HW4-Edge_Cuts.gbr'.
+Created Gerber job file '/Users/IanShi/Desktop/Classwork/ME 433/Coursework/HW4/HW4 Kicad/HW4-job.gbrjob'.
+Info: Done.
