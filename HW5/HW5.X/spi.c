@@ -2,7 +2,7 @@
 void initSPI() {
     // Pin B14 has to be SCK1
     // Turn off analog pins
-    ANSELA = 0;
+    ANSELB = 0;
     // Make an output pin for CS: pin B6
     TRISBbits.TRISB6 = 0;
     LATBbits.LATB6 = 1;
