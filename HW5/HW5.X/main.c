@@ -5,6 +5,7 @@
 unsigned short make_byte(unsigned char a_or_b, unsigned short volt);
 
 int main() {
+    NU32DIP_Startup();
     initSPI();
     // values for triangle wave
     int sign = 1;
