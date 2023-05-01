@@ -1,4 +1,4 @@
-# HW9 Part 2: Low-pass filter with IIR
+# HW9 Part 1: Low-pass filter with moving average
 
 # reading csv file
 import csv
@@ -16,20 +16,20 @@ with open('sigD.csv') as f:
         t.append(float(row[0])) # leftmost column
         data.append(float(row[1])) # second column
 
-# adding lp filter
-lpf = []
-A = 0.95
-B = 0.05
-for datapoint in data:
-    if len(lpf) == 0:
-        lpf.append(0)
-    else:
-        lpf.append(lpf[-1]*A + datapoint*B)
+# creating MAF
+lpf = np.zeros(len(t))
+X = 5
+for i in range(X, len(t)):
+    for j in range(X):
+        sum = 0
+        sum += data[i-j]
+    maf = sum/X
+    lpf[i] = maf
 
 # plt.plot(t, data, 'b-*', t, lpf, 'r-*')
 # plt.xlabel('Time [s]')
 # plt.ylabel('Signal')
-# plt.title('Signal vs Time (A = 0.99, B = 0.01)')
+# plt.title('Signal vs Time')
 # plt.show()
 
 # lp filter with fft
@@ -54,13 +54,10 @@ Y2 = Y2[range(int(n/2))]
 
 fig, (ax1, ax2) = plt.subplots(2,1)
 ax1.plot(t, y1, 'b', t, y2, 'r')
-ax1.set_title('Signal vs Time and FFT (A = ' + str(A) + ', B = ' + str(B) + ')')
+ax1.set_title('Signal vs Time and FFT (X = ' + str(X) + ')')
 ax1.set_xlabel('Time [s]')
 ax1.set_ylabel('Amplitude')
 ax2.loglog(frq, abs(Y1), 'b', frq, abs(Y2), 'r')
 ax2.set_xlabel('Freq (Hz)')
 ax2.set_ylabel('|Y(freq)|')
 plt.show()
-
-
-
