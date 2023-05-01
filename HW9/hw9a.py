@@ -18,10 +18,10 @@ with open('sigD.csv') as f:
 
 # creating MAF
 lpf = np.zeros(len(t))
-X = 5
+X = 100
 for i in range(X, len(t)):
+    sum = 0
     for j in range(X):
-        sum = 0
         sum += data[i-j]
     maf = sum/X
     lpf[i] = maf
@@ -35,6 +35,7 @@ for i in range(X, len(t)):
 # lp filter with fft
 dt = t[1] - t[0]
 Fs = 1/dt # sample rate
+print("Sampling Rate: " + str(Fs))
 Ts = 1.0/Fs; # sampling interval
 ts = np.arange(0,t[-1],Ts) # time vector
 

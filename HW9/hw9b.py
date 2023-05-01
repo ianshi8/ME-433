@@ -8,7 +8,7 @@ import numpy as np # for sine function
 t = [] # column 0
 data = [] # column 1
 
-with open('sigD.csv') as f:
+with open('sigA.csv') as f:
     # open the csv file
     reader = csv.reader(f)
     for row in reader:
@@ -37,7 +37,6 @@ dt = t[1] - t[0]
 Fs = 1/dt # sample rate
 Ts = 1.0/Fs; # sampling interval
 ts = np.arange(0,t[-1],Ts) # time vector
-
 y1 = data # the data to make the fft from
 y2 = lpf
 
