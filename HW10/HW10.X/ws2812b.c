@@ -35,7 +35,7 @@ void ws2812b_setColor(wsColor * c, int numLEDs) {
         // loop through each color bit, MSB first
         for (j = 7; j >= 0; j--) {
             // if the bit is a 1
-            if ((c[i].r << j & 0b1) == 0b1) { // identify the bit in c[].r, is it 1
+            if ((c[i].r >> j & 0b01) == 1) { // identify the bit in c[].r, is it 1
                 // the high is longer
                 delay_times[nB] = delay_times[nB - 1] + HIGHTIME;
                 nB++;
@@ -54,7 +54,7 @@ void ws2812b_setColor(wsColor * c, int numLEDs) {
         // do it again for green
         for (j = 7; j >= 0; j--) {
             // if the bit is a 1
-            if ((c[i].g << j & 0b1) == 0b1) { // identify the bit in c[].r, is it 1
+            if ((c[i].g >> j & 0b01) == 1) { // identify the bit in c[].r, is it 1
                 // the high is longer
                 delay_times[nB] = delay_times[nB - 1] + HIGHTIME;
                 nB++;
@@ -73,7 +73,7 @@ void ws2812b_setColor(wsColor * c, int numLEDs) {
 		// do it again for blue
         for (j = 7; j >= 0; j--) {
             // if the bit is a 1
-            if ((c[i].b << j & 0b1) == 0b1) { // identify the bit in c[].r, is it 1
+            if ((c[i].b >> j & 0b01) == 1) { // identify the bit in c[].r, is it 1
                 // the high is longer
                 delay_times[nB] = delay_times[nB - 1] + HIGHTIME;
                 nB++;
